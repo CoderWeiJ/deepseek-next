@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { ClerkProvider } from "@clerk/nextjs";
+import QueryClientProvider from "@/components/QueryClientProvider";
+import Navbar from "@/components/Navbar";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,12 +27,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <QueryClientProvider>
+        <html lang="en">
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-row`}
+          >
+            <div className="w-1/5 max-w-[350px] h-screen bg-gray-50">
+            <Navbar titleList={[]} />
+            </div>
+            {children}
+          </body>
+        </html>
+      </QueryClientProvider>
+    </ClerkProvider>
   );
 }
