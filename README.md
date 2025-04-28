@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Deepseek Next 🚀
 
-## Getting Started
+## 简介
+本项目 `deepseek-next` 是一个基于 Next.js 的 Web 应用，集成了 `@ai-sdk/deepseek`、`@clerk/nextjs` 等多种库，用于实现 AI 相关功能和用户认证等功能。
 
-First, run the development server:
-
+## 安装依赖
+在项目根目录下，运行以下命令安装项目依赖：
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 开发模式
+启动开发服务器：
+```bash
+pnpm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 构建项目
+构建生产环境版本：
+```bash
+pnpm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 生产环境运行
+启动生产环境服务器：
+```bash
+pnpm run start
+```
 
-## Learn More
+## 代码检查
+运行代码检查：
+```bash
+pnpm run lint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 依赖列表
+### 生产依赖
+- `@ai-sdk/deepseek`: `^0.2.11`
+- `@clerk/nextjs`: `^6.15.0`
+- `@emotion/react`: `^11.14.0`
+- `@emotion/styled`: `^11.14.0`
+- `@mui/icons-material`: `^7.0.2`
+- `@mui/material`: `^7.0.2`
+- `@tanstack/react-query`: `^5.74.4`
+- `ai`: `^4.3.8`
+- `axios`: `^1.8.4`
+- `dotenv`: `^16.5.0`
+- `drizzle-orm`: `^0.42.0`
+- `next`: `15.3.0`
+- `pg`: `^8.14.1`
+- `postgres`: `^3.4.5`
+- `react`: `^19.0.0`
+- `react-dom`: `^19.0.0`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 开发依赖
+- `@eslint/eslintrc`: `^3`
+- `@tailwindcss/postcss`: `^4`
+- `@types/node`: `^20`
+- `@types/pg`: `^8.11.13`
+- `@types/react`: `^19`
+- `@types/react-dom`: `^19`
+- `drizzle-kit`: `^0.31.0`
+- `eslint`: `^9`
+- `eslint-config-next`: `15.3.0`
+- `tailwindcss`: `^4`
+- `tsx`: `^4.19.3`
+- `typescript`: `^5`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 项目结构说明
+项目已取消结构说明，若需了解具体文件和目录功能，请查看代码注释。
